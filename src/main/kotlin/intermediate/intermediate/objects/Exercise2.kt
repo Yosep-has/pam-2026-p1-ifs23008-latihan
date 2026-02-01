@@ -1,0 +1,26 @@
+package intermediate.objects
+
+interface Vehicle {
+    val name: String
+    fun move(): String
+}
+
+object FlyingSkateboard : Vehicle {
+    override val name = "Flying Skateboard"
+
+    override fun move(): String {
+        return "Glides through the air with a hover engine"
+    }
+
+    // Fungsi tambahan khusus untuk object ini
+    fun fly(): String {
+        return "Woooooooo"
+    }
+}
+
+fun main() {
+    println("${FlyingSkateboard.name}: ${FlyingSkateboard.move()}")
+    // Flying Skateboard: Glides through the air with a hover engine
+    println("${FlyingSkateboard.name}: ${FlyingSkateboard.fly()}")
+    // Flying Skateboard: Woooooooo
+}
